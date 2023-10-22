@@ -1,0 +1,43 @@
+Comandos de Git:
+
+pwd --> te dice la ruta en la que estas
+
+ls --> para ver todo lo que hay dentro de la carpeta
+
+cd --> es para ir moviendote por carpetas
+
+git init --> te crea un repositorio de git
+
+git status --> nos dice como está actualmente nuestro repositorio
+
+git add --> (nombre archivo ej: index.html) añade el elemento al staging area para luego hacerle un commit
+
+git add .  --> añade todo lo cambiado de todas las carpetas y elementos al staging area
+
+SIEMPRE HACER UN GIT ADD ANTES DE HACER UN COMMIT
+
+git commit -m "mi primer commit" --> es para hacer un commit poniendole el nombre que quieras
+
+ctrl+l --> limpia la terminal
+
+git log --> te muestra todos los commit
+
+git checkout 'siglas primeras del commit que queremos recuperar ej: fe801' --> sirve para recuperar el archivo desde ese commit
+
+git checkout 'master' --> esto nos devuelve al último commit subido
+
+ git reset +siglas del comit ej:fe801  --> Este comando restablece la rama al commit especificado, pero mantiene los cambios en el área de preparación. Es útil cuando deseas deshacer los commits sin perder los cambios.
+
+rm +nombrearchivo  ej: style.css --> te borra el archivo
+
+git restore +nombrearchivo --> restaura el componente borrado
+
+
+----------- PARA CREAR UN REPOSITORIO DESDE GITHUB Y AÑADIR NUESTRO PROYECTO A GITHUB DESDE COMANDOS DE GIT ----------------------
+
+git remote add origin https://github.com/FEricMorata/CursoGit.git
+
+$ ssh-keygen -t ed25519 -C "ericmorata.web.dev@example.com"  -->  crea una clave ssh la cual te pedira contraseña 31416*-
+
+git push -u origin main
+
