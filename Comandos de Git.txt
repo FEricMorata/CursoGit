@@ -1,43 +1,50 @@
 Comandos de Git:
 
-pwd --> te dice la ruta en la que estas
+pwd: Muestra la ruta actual del directorio en el que te encuentras.
 
-ls --> para ver todo lo que hay dentro de la carpeta
+ls: Lista el contenido del directorio actual, mostrando todos los archivos y carpetas.
 
-cd --> es para ir moviendote por carpetas
+cd [nombre carpeta]: Permite navegar entre carpetas. Puedes usar cd seguido del nombre de la carpeta a la que quieres ir.
 
-git init --> te crea un repositorio de git
+git init: Inicializa un repositorio Git en el directorio actual, creando un repositorio vacío donde se rastrearán los cambios.
 
-git status --> nos dice como está actualmente nuestro repositorio
+git status: Muestra el estado actual de tu repositorio, incluyendo los archivos sin seguimiento, los cambios sin preparar y los cambios en el área de preparación.
 
-git add --> (nombre archivo ej: index.html) añade el elemento al staging area para luego hacerle un commit
+git add [nombre archivo]: Agrega un archivo específico al área de preparación, lo que significa que estará listo para ser incluido en el próximo commit.
 
-git add .  --> añade todo lo cambiado de todas las carpetas y elementos al staging area
+git add .: Agrega todos los cambios realizados en los archivos de todas las carpetas al área de preparación.
 
-SIEMPRE HACER UN GIT ADD ANTES DE HACER UN COMMIT
+Nota: Es importante realizar un git add antes de hacer un commit para incluir los cambios deseados.
 
-git commit -m "mi primer commit" --> es para hacer un commit poniendole el nombre que quieras
+git commit -m "mensaje": Crea un nuevo commit con los cambios en el área de preparación y un mensaje descriptivo que explica los cambios realizados.
 
-ctrl+l --> limpia la terminal
+ctrl + l: Limpia la terminal, eliminando el contenido previo y proporcionando un espacio de trabajo más limpio.
 
-git log --> te muestra todos los commit
+git log: Muestra un registro de todos los commits realizados en el repositorio, incluyendo detalles como el autor, la fecha y el mensaje del commit.
 
-git checkout 'siglas primeras del commit que queremos recuperar ej: fe801' --> sirve para recuperar el archivo desde ese commit
+git checkout [siglas commit]: Permite recuperar un archivo desde un commit anterior usando las siglas del commit. Por ejemplo, git checkout fe801.
 
-git checkout 'master' --> esto nos devuelve al último commit subido
+git checkout master: Regresa al último commit de la rama principal (generalmente llamada "master").
 
- git reset +siglas del comit ej:fe801  --> Este comando restablece la rama al commit especificado, pero mantiene los cambios en el área de preparación. Es útil cuando deseas deshacer los commits sin perder los cambios.
+git checkout -b [nombre rama]: Crea y cambia a una nueva rama con el nombre especificado. Esto es útil para trabajar en nuevas características o correcciones sin afectar la rama principal.
 
-rm +nombrearchivo  ej: style.css --> te borra el archivo
+git branch: Lista todas las ramas en el repositorio, mostrando la rama actual con un asterisco.
 
-git restore +nombrearchivo --> restaura el componente borrado
+git reset [siglas commit]: Restablece la rama al commit especificado, manteniendo los cambios en el área de preparación. Útil para deshacer commits sin perder los cambios realizados.
+
+rm [nombre archivo]: Borra un archivo específico en el sistema de archivos.
+
+git restore [nombre archivo]: Restaura un archivo que ha sido borrado, devolviéndolo a su estado anterior al borrado.
+
+git pull: Descarga los cambios desde el repositorio remoto en GitHub a tu repositorio local, actualizando tu código local con los cambios más recientes.
+
+Para crear un repositorio desde GitHub y añadir tu proyecto desde la línea de comandos de Git:
+
+git remote add origin [URL del repositorio en GitHub]: Conecta tu repositorio local con un repositorio remoto en GitHub, permitiéndote enviar y recibir cambios.
+
+$ ssh-keygen -t ed25519 -C "tu-correo@example.com": Genera una clave SSH, que es utilizada para autenticarte en GitHub de manera segura. Asegúrate de establecer una contraseña segura cuando se te solicite.
+
+git push -u origin main: Sube tus cambios locales al repositorio en GitHub, estableciendo la rama "main" como rama remota predeterminada para futuras operaciones de push y pull.
 
 
------------ PARA CREAR UN REPOSITORIO DESDE GITHUB Y AÑADIR NUESTRO PROYECTO A GITHUB DESDE COMANDOS DE GIT ----------------------
-
-git remote add origin https://github.com/FEricMorata/CursoGit.git
-
-$ ssh-keygen -t ed25519 -C "ericmorata.web.dev@example.com"  -->  crea una clave ssh la cual te pedira contraseña 31416*-
-
-git push -u origin main
 
